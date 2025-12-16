@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap container</title>
+    <link rel="stylesheet" href="../style/bootstrap/bootstrap.min.css">
+    <style>
+      h1, h2, h3 {text-align: center;}
+      [class^="col"]{background-color:whitesmoke;outline: 1px dotted #007bff; box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); margin-top: 15px;}
+    </style>
+  </head>
+  <body>
+    <h1>Grid System</h1>
+    <h2>Grid One</h2>
+    <!-- 
+      grid ទីមួយមានមេជា container: fixed-width
+      container មានកូនជា row ចំនួនពីរ
+    -->
+    <div class="container text-center">
+      <div class="row">
+        <!-- row ទីមួយមាន col ជាកូនចំនួនពីរប្រវែងស្មើគ្នា -->
+        <div class="col">column 1 of row 1</div><div class="col">column 2 of row 1</div>
+      </div>
+      <!--  row ទីពីរមាន col ជាកូនចំនួនបីប្រវែងស្មើគ្នា -->
+      <div class="row">
+        <div class="col">colum 1 of row 2</div><div class="col">column 2 of row 2</div><div class="col">column 3 of row 2</div>
+      </div>
+    </div>
+    <h2>Grid Two</h2>
+    <!-- 
+      grid ទីពីរមានមេជា container: fixed-width
+      container មានកូនជា row ចំនួនពីរ
+    -->
+    <div class="container text-center">
+      <!-- row ទីមួយមាន col ជាកូនចំនួនបី-->
+      <div class="row">
+        <div class="col">column 1 of row 1</div>
+        <!-- col ទី២យក៦ក្រឡា ឯក្រឡានៅសល់ចែកជាពីចំណែកស្មើគ្នាសម្រាប់ col​ ទី១ និង col ទី៣-->
+        <div class="col-6">column 2 of row 1</div>
+        <div class="col">column 3 of row 1</div>
+      </div>
+      <!-- row ទីពីរមាន col ជាកូនចំនួនបី-->
+      <div class="row">
+        <div class="col">column 1 of row 2</div>
+        <!-- col ទី២យក៥ក្រឡា ឯក្រឡានៅសល់ចែកជាពីចំណែកស្មើគ្នាសម្រាប់ col​ ទី១ និង col ទី៣-->
+        <div class="col-5">column 2 of row 2</div>
+        <div class="col">column 3 of row 2</div>
+      </div>
+    </div>
+    <h2>Grid Three</h2>
+    <!-- 
+      grid ទីបីមានមេជា container: fixed-width
+      container មានកូនជា row ចំនួនពីរ
+    -->
+    <div class="container text-center">
+      <div class="row justify-content-md-center">
+        <div class="col col-lg-2">column 1 of row 1</div><div class="col-md-auto">column 2 of row 1</div><div class="col col-lg-2">column 3 of row 1</div>
+      </div>
+      <div class="row">
+        <div class="col">column 1 of row 2</div><div class="col-md-auto">column 2 of row 2</div><div class="col col-lg-2">column 3 of row 2</div>
+      </div>
+  </div>
+    <script src="../script/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

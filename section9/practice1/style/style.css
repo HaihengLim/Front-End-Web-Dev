@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font: 16px/1.6 Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr 250px;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-areas:
+    "header header header"
+    "sidebar main ads"
+    "footer footer footer";
+
+  /*ចែកចេញ grids ជា៥តំបន់មានឈ្មោះ header, sidebar, main, ads, និង footerfooter តាមប្លង់ខាងក្រោម៖ */
+}
+
+/* ដាក់ grid item មានថ្នាក់សម្គាល់ក្នុងតំបន់បានបង្កើត */
+.header {
+  grid-area: header;
+  background: #333;
+  color: #fff;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #eee;
+}
+
+.main {
+  grid-area: main;
+  background: dodgerblue;
+}
+
+.ads {
+  grid-area: ads;
+  background: #959595;
+}
+
+.footer {
+  grid-area: footer;
+  background: #333;
+  color: #fff;
+}
+
+.container > * {
+  padding: 1rem;
+  border-radius: 6px;
+}

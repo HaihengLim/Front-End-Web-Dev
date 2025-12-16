@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography & Utilities</title>
+    <link href="../style/bootstrap/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-light text-dark">
+    <div class="container p-4 my-4 rounded" style="background:#e4f1ff;">
+      <h2 class="mb-4 text-primary">Bootstrap Border Styles</h2>
+      <div class="p-3 my-5 border">.border</div>
+      <div class="p-3 my-5 border-top">.border-top</div>
+      <div class="p-3 my-5 border-bottom">.border-bottom</div>
+      <div class="p-3 my-5 border-start">.border-start</div>
+      <div class="p-3 my-5 border-end">.border-end</div>  
+      <div class="p-3 my-5 border border-primary rounded-5">.border-primary</div>
+      <div class="p-3 my-5 border border-success rounded-pill">.border-success</div>
+      <div class="p-3 my-5 border border-danger text-center">.border-danger</div>
+      <div class="p-3 my-5 border rounded">.rounded</div>
+      <div class="p-3 my-5 border rounded-circle text-center">circle</div>
+      <div class="p-3 my-5 border border-3">.border-3 width</div>
+      <div class="p-3 my-5 border border-dashed">.border-dashed</div>
+    </div>
+
+    <div class="container p-4 my-4 rounded clearfix" style="background:#fff7e6;">
+      <h2 class="mb-4 text-primary">Image alignments - left, right, and center.</h2>
+      <img src="../image/reactjs.jpeg" class="img-fluid img-thumbnail shadow float-start" alt="ReactJS">
+      <img src="../image/laravel.jpeg" class="img-fluid img-thumbnail shadow float-end" alt="Laravel">
+      <img src="../image/php.jpeg" class="img-fluid img-thumbnail shadow d-block mx-auto" alt="PHP">
+    </div>
+
+    <div class="container p-4 my-4 rounded" style="background:#e8ffe6;">
+      <h2 class="mb-4 text-success">Responsive Table</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+          <thead class="table-dark">
+            <tr><th>#</th><th>Name</th><th>City</th><th>Age</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Sophia</td><td>Bangkok</td><td>23</td></tr>
+            <tr><td>2</td><td>Lina</td><td>Phnom Penh</td><td>30</td></tr>
+            <tr><td>3</td><td>John</td><td>Singapore</td><td>28</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="container p-4 my-4 rounded" style="background:#f2e6ff;">
+      <h2 class="mb-4 text-primary">Beautiful Form (All Input Types)</h2>
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" placeholder="Enter your name">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" placeholder="Enter your email">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" placeholder="Enter password">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Phone</label>
+          <input type="tel" class="form-control" placeholder="Phone number">
+        </div>
+        <div class="col-12">
+          <label class="form-label">Address</label>
+          <input type="text" class="form-control" placeholder="Street address">
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">City</label>
+          <input type="text" class="form-control" placeholder="City">
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Date of Birth</label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Gender</label>
+          <select class="form-select">
+            <option selected>Select...</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Upload File</label>
+          <input type="file" class="form-control">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Range (0–100)</label>
+          <input type="range" class="form-range">
+        </div>
+        <div class="col-12 form-check ms-2">
+          <input class="form-check-input" type="checkbox" id="agree">
+          <label class="form-check-label" for="agree">I agree with the terms</label>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary w-100 py-2">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script src="../script/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

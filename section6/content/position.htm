@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CSS position Property — Demo</title>
+<style>
+  :root{
+    --bg: #0f1724;
+    --card: #0b1220;
+    --muted: #94a3b8;
+    --accent: #7c3aed;
+    --glass: rgba(255,255,255,0.04);
+    --gap: 20px;
+    --radius: 12px;
+  }
+
+  /* Page layout */
+  body{
+    margin:0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background:
+      linear-gradient(180deg, #061226 0%, #08172a 60%),
+      var(--bg);
+    color: #e6eef8;
+    line-height: 1.45;
+    padding: 28px;
+  }
+
+  header{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:22px;
+  }
+  header h1{
+    margin:0;
+    font-size:18px;
+    letter-spacing:0.2px;
+  }
+  header p{ margin:0; color:var(--muted); font-size:13px; }
+
+  .wrap{
+    display:grid;
+    grid-template-columns: 1fr 380px;
+    gap: var(--gap);
+    align-items:start;
+  }
+
+  /* Left column: demos */
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding:18px;
+    border-radius: var(--radius);
+    box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+  }
+
+  .demo-block {
+    border-radius:10px;
+    background: linear-gradient(180deg,var(--card), rgba(11,18,32,0.96));
+    padding:18px;
+    margin-bottom:16px;
+    position: relative; /* important: parent for absolute-child demo */
+    overflow: visible;
+  }
+
+  .demo-title { font-weight:600; margin:0 0 8px 0; color:#dfe7ff; font-size:14px;}
+  .demo-note { color:var(--muted); font-size:13px; margin:0 0 12px 0; }
+
+  /* The boxes shown inside demos */
+  .box {
+    width:120px;
+    height:80px;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color: #081226;
+    font-weight:700;
+    font-size:13px;
+  }
+  .box.a { background: #7c3aed; }    /* purple */
+  .box.b { background: #06b6d4; }    /* teal */
+  .box.c { background: #f97316; }    /* orange */
+  .box.d { background: #34d399; }    /* green */
+
+  /* STATIC: default (position: static) */
+  .static-flow {
+    display:flex;
+    gap:12px;
+    align-items:center;
+  }
+
+  /* RELATIVE: offset but still occupies original space */
+  .relative-flow { display:flex; gap:12px; align-items:center; min-height:100px; background:var(--glass); padding:10px; border-radius:8px;}
+  .relative-flow .box.a { position: relative; left: 18px; top: 10px; }
+
+  /* ABSOLUTE: positioned relative to closest positioned ancestor (.demo-block is positioned) */
+  .absolute-demo { height:160px; background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border-radius:8px; }
+  .absolute-demo .box.a { position:absolute; right:18px; top:18px; }
+  .absolute-demo .box.b { position:absolute; left:18px; bottom:18px; }
+
+  /* FIXED: positioned relative to viewport */
+  .fixed-demo {
+    min-height:120px;
+    padding:16px;
+  }
+  .fixed-helper{
+    height:60px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.06), transparent);
+    border-radius:6px;
+    padding:10px;
+    color:var(--muted);
+  }
+  /* create a small fixed box that stays in viewport */
+  .fixed-box {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width:140px;
+    height:70px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(180deg,#ffefc7,#ffd1a8);
+    color:#162223;
+    font-weight:700;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  }
+
+  /* STICKY: will stick when scrolled to threshold (top: 0) */
+  .sticky-demo { height:260px; overflow:auto; padding:0; border-radius:8px; background:var(--glass); }
+  .sticky-header{
+    position: sticky;
+    top: 0;
+    padding:12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    font-weight:700;
+  }
+  .sticky-content { padding:12px; color:var(--muted); font-size:13px; }
+
+  /* Z-index stacking demo */
+  .stack-demo { height:160px; position:relative; border-radius:8px; background: linear-gradient(180deg, rgba(255,255,255,0.01),transparent);}
+  .stack-demo .box { width:140px; height:100px; position:absolute; top:18px; left:18px; }
+  .stack-demo .box.z2 { left:56px; top:40px; z-index: 2; background:#fb7185; }
+  .stack-demo .box.z1 { left:96px; top:78px; z-index: 1; background:#60a5fa; }
+  .stack-demo .box.z0 { left:136px; top:116px; z-index: 0; background:#34d399; }
+
+  /* Right column: cheats & code snippets */
+  .cheats {
+    position:sticky;
+    top:28px;
+    align-self:start;
+  }
+  .snippet {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+    background: #071126;
+    padding:12px;
+    border-radius:8px;
+    color:#9fb4ff;
+    font-size:13px;
+    line-height:1.4;
+    overflow:auto;
+  }
+
+  footer { margin-top:18px; color:var(--muted); font-size:13px; }
+
+  /* responsive */
+  @media (max-width:960px){
+    .wrap{ grid-template-columns: 1fr; }
+    .fixed-box{ right:12px; bottom:12px; width:120px; height:60px; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>CSS <code>position</code> property — interactive demo</h1>
+      <p>Shows <strong>static</strong>, <strong>relative</strong>, <strong>absolute</strong>, <strong>fixed</strong>, and <strong>sticky</strong> behavior plus a <em>z-index</em> stacking example.</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <!-- LEFT: Demos -->
+    <div>
+      <section class="card">
+        <div class="demo-block">
+          <p class="demo-title">Static (default)</p>
+          <p class="demo-note">Elements flow in the normal document order. No positioning offsets apply.</p>
+
+          <div class="static-flow">
+            <div class="box a">Box A</div>
+            <div class="box b">Box B</div>
+            <div class="box c">Box C</div>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <p class="demo-title">Relative</p>
+          <p class="demo-note">`position: relative` offsets the element visually but it still occupies the original space in the flow.</p>
+
+          <div class="relative-flow">
+            <div class="box a">Rel A (moved)</div>
+            <div class="box b">Rel B</div>
+            <div class="box c">Rel C</div>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <p class="demo-title">Absolute</p>
+          <p class="demo-note">`position: absolute` positions the element relative to the nearest *positioned* ancestor (non-static). Here the demo-block is that ancestor.</p>
+
+          <div class="absolute-demo">
+            <!-- container is positioned (see .demo-block { position: relative }) -->
+            <div class="box a">Abs A</div>
+            <div class="box b">Abs B</div>
+            <p style="color:var(--muted); margin-top:110px; font-size:13px;">The absolute boxes don't affect document flow; other content ignores their space.</p>
+          </div>
+        </div>
+
+        <div class="demo-block fixed-demo">
+          <p class="demo-title">Fixed</p>
+          <p class="demo-note">`position: fixed` attaches the element to the viewport. It stays visible when you scroll.</p>
+
+          <div class="fixed-helper">Scroll this page — the small fixed tile (bottom-right) will remain in place.</div>
+        </div>
+
+        <div class="demo-block">
+          <p class="demo-title">Sticky</p>
+          <p class="demo-note">`position: sticky` behaves like `relative` until the element reaches the offset (top:0), then it "sticks" to that position.</p>
+
+          <div class="sticky-demo" id="stickyContainer">
+            <div class="sticky-header">I am sticky — I stick to the top of this scroll area</div>
+            <div class="sticky-content">
+              <p>Scroll inside this box to see the sticky header remain visible.</p>
+              <p style="color:var(--muted);">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, tempora.</p>
+              <p style="color:var(--muted);">Add more content here to lengthen the scroll area.</p>
+              <p style="color:var(--muted);">More content. More content. More content. More content.</p>
+              <p style="color:var(--muted);">Final line.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <p class="demo-title">Z-index / stacking</p>
+          <p class="demo-note">When elements overlap, `z-index` controls stacking order. Only works on positioned elements (non-static).</p>
+
+          <div class="stack-demo">
+            <div class="box z0">z: 0</div>
+            <div class="box z1">z: 1</div>
+            <div class="box z2">z: 2</div>
+          </div>
+        </div>
+
+        <footer>
+          Tip: to make an ancestor the reference for `position: absolute`, give it any non-`static` position (commonly `position: relative`).
+        </footer>
+      </section>
+    </div>
+
+    <!-- RIGHT: Cheatsheet & snippets -->
+    <aside class="cheats">
+      <div class="card">
+        <p class="demo-title">Quick cheat</p>
+        <div class="snippet" aria-hidden="true">
+/* Common position values */
+.static { position: static; }   /* default — normal flow */
+.relative { position: relative; top:10px; left:10px; } /* offset, keeps original space */
+.absolute { position: absolute; top:10px; right:10px; } /* removed from flow, positioned inside nearest positioned ancestor */
+.fixed { position: fixed; top:10px; right:10px; } /* viewport-locked */
+.sticky { position: sticky; top:0; } /* sticks when scrolled to offset */
+
+/* z-index */
+.positioned { position: relative; z-index: 10; }
+        </div>
+
+        <p style="color:var(--muted); margin-top:12px; font-size:13px;">Short notes:</p>
+        <ul style="color:var(--muted); font-size:13px; padding-left:16px; margin-top:6px;">
+          <li><strong>Absolute</strong> elements do not take up space in the normal flow.</li>
+          <li><strong>Relative</strong> only moves the element visually — layout space stays the same.</li>
+          <li><strong>Fixed</strong> elements are viewport-relative; often used for toolbars/toasts.</li>
+          <li><strong>Sticky</strong> is great for headers that pin while scrolling inside a container.</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Fixed box (viewport) -->
+  <div class="fixed-box">Fixed Box</div>
+</body>
+</html>

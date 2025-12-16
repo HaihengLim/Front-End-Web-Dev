@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="veiwport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../content/about.html">About Me</a>
+        <a href="../content/project.html">Project</a>
+        <a href="../root/services.html" class="active">Services</a>
+        <a href="../content/contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <div class="service-container">
+      <h2 data-aos="fade-right" data-aos-duration="2000">Our Services</h2>
+      <div class="card-container">
+        <div
+          class="card"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000"
+        >
+          <h3>Front End -Web Development</h3>
+          <div class="detail">
+            <ul>
+              <li>We offer to build a responsive website with good quality</li>
+              <li>Fully maintenance on bug in website we had built.</li>
+              <li>
+                We optimize ui to make it smooth and work perfectly on all
+                devices.
+              </li>
+            </ul>
+          </div>
+
+          <div class="btn-wrapper">
+            <button>Learn More</button>
+            <button>Get Services</button>
+          </div>
+        </div>
+
+        <div
+          class="card"
+          data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000"
+        >
+          <h3>Backend Development</h3>
+          <div class="detail">
+            <ul>
+              <li>Secure RESTful API with CRUD operations.</li>
+              <li>Authentication system (JWT + role-based access)</li>
+              <li>Database schema design</li>
+              <li>Postman collection for testing</li>
+            </ul>
+          </div>
+
+          <div class="btn-wrapper">
+            <button>Learn More</button>
+            <button>Get Services</button>
+          </div>
+        </div>
+
+        <div
+          class="card"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000"
+        >
+          <h3>Mobile App Development</h3>
+          <div class="detail">
+            <ul>
+              <li>Cross - platform iOS + Android app</li>
+              <li>
+                Build feadtures user login, push notifications, real-time
+                database sync
+              </li>
+              <li>Integration with Google Maps API (location services)</li>
+              <li>App store publishing assistance (Google Play + App Store)</li>
+            </ul>
+          </div>
+
+          <div class="btn-wrapper">
+            <button>Learn More</button>
+            <button>Get Services</button>
+          </div>
+        </div>
+
+        <div
+          class="card"
+          data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000"
+        >
+          <h3>Cloud & DevOps Setup</h3>
+          <div class="detail">
+            <ul>
+              <li>CI/CD poprline with GitHub Actions</li>
+              <li>Containerized app with Docker</li>
+              <li>Kubernetes cluster setup for scaling</li>
+              <li>Monitoring + logging setup (CloudWatch/Prometheus)</li>
+            </ul>
+          </div>
+
+          <div class="btn-wrapper">
+            <button>Learn More</button>
+            <button>Get Services</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

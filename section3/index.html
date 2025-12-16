@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Week 3 Practice</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html">About</a>
+        <a href="work.html">Project/Work</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Get in touch</h1>
+        <p>Feel free to reach out to via following form.</p>
+        <form action="mailto:haihenglim9@gmail.com">
+          <div>
+            <label for="name">FullName: </label>
+            <input type="text" name="name" id="name" required />
+          </div>
+
+          <div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" />
+          </div>
+
+          <div>
+            <label for="phone">Phone Number: </label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="ex: +855868830651"
+            />
+          </div>
+
+          <div>
+            <label for="company">Company: </label>
+            <input type="text" name="company" id="company" />
+          </div>
+
+          <div class="full-width">
+            <label for="subject">Subject: </label>
+            <input type="text" name="subject" id="subject" />
+          </div>
+
+          <div class="full-width">
+            <label for="subject">Subject: </label>
+            <select name="reason" id="reason">
+              <option value="">--Select an option</option>
+              <option value="Project">Project</option>
+              <option value="job">Job</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="general">General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="full-width">
+            <label for="message"></label>
+            <textarea name="message" id="message" row="6" required></textarea>
+          </div>
+
+          <div class="checkbox">
+            <input type="checkbox" name="newsletter" id="newsltter" />
+            <label for="newSletter"></label>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <section class="info">
+        <p>Email: haihenglim9@gmail.com</p>
+        <p>Phone: +855 09688651</p>
+
+        <a href="https:github.com/limhaiheng">GitHub</a>
+        <a href="https://likedin/in/iimhaiheng"></a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 My Portfolio</p>
+    </footer>
+  </body>
+</html>

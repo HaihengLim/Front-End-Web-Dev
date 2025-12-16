@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="">about</a>
+        <a href="">project/work</a>
+        <a href="">resume</a>
+        <a href="">contact</a>
+      </nav>
+    </header>
+    <main>
+      <section id="multimedia" class="multimedia">
+        <h1>
+          Multimedia - image, audio, video, canvas, svg, embed, object, iframe
+        </h1>
+        <h2>Image - mobile, tablet, standard desktop, large desktop</h2>
+        <img
+          src="../image/FlagOfCambodia.png"
+          srcset="
+            ../image/FlagOfCambodiaMobile.png  480w,
+            ../image/FlagOfCambodiaTablet.png  768w,
+            ../image/FlagOfCambodia.png       1024w,
+            ../image/FlagOfCambodiaLarge.png  1600w
+          "
+          sizes="(max-width:
+        480px) 480px, (max-width: 768px) 768px, (max-width: 1200px) 1024px,
+        1600px"
+          alt="flag of cambodia"
+        />
+        <p>Flag of Cambodia</p>
+        <h2>Audio - mp3</h2>
+        <audio controls>
+          <source src="../audio/NokorReach.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element
+          <a href="../audio/NokorReach.mp3">Download nokoreach mp3.</a>
+        </audio>
+        <p>Nokoreach</p>
+        <h2>Video-mp4</h2>
+        <video width="1280" height="720" controls>
+          <source src="../video/NationalAnthemOfCambodia.mp4" />
+          Your browser does not support the video tag
+          <a href="../video/NationalAnthemOfCambodia.mp4"
+            >Donwload National Anthem Of Cambodia</a
+          >
+        </video>
+        <p>National Anthem of Cambodia</p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 My Portfolio</p>
+    </footer>
+  </body>
+</html>

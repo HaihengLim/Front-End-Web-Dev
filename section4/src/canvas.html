@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Canvas Demo</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="500"
+      height="300"
+      style="border: 1px solid black"
+    >
+      Your browser does not support the canvas element.
+    </canvas>
+
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      let x = 50;
+      let y = 150;
+      let dx = 2;
+
+      function drawBall() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.arc(x, y, 20, 0, Math.PI * 2);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+        ctx.closePath();
+        x += dx;
+        if (x + 20 > canvas.width || x - 20 < 0) {
+          dx = -dx;
+        }
+        requestAnimationFrame(drawBall);
+      }
+      drawBall();
+    </script>
+  </body>
+</html>

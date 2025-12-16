@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap container</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <style>
+      h1,
+      h2,
+      h3 {
+        text-align: center;
+        margin: 15px;
+      }
+      .row div {
+        background-color: whitesmoke;
+        padding: 16px;
+        outline: 1px dotted black;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ប្រព័ន្ធក្រឡា</h1>
+    <h2>ឧ.១ ជួរឈរប្រវែងស្មើៗគ្នា</h2>
+    <!-- ឧ.១. ក្រឡាមានមួយជួរដេក។ ជួរដេកបែងជាពីរជួរឈរប្រវែងស្មើគ្នា -->
+    <div class="container">
+      <div class="row">
+        <div class="col">ជួរឈរទី១</div>
+        <div class="col">ជួរឈរទី២</div>
+      </div>
+    </div>
+    <!-- ចុច CTRL+F1 ឬ CTRL+F1+Fn បើកវេបផេកពិនិត្យ។ -->
+
+    <h2>ឧ.២ ជួរឈរទី១មាន​ ២ក្រឡា ជួរឈរទី២ ស្វ័យប្រវត្ត</h2>
+    <!-- ឧ.២. ក្រឡាមានមួយជួរដេក។ ជួរដេកបែងជាពីរជួរឈរប្រវែងផ្សេងគ្នា។ -->
+    <div class="container">
+      <div class="row">
+        <div class="col-2">ជួរឈរទី១</div>
+        <div class="col">ជួរឈរទី២</div>
+      </div>
+    </div>
+    <!-- ចុច CTRL+F1 ឬ CTRL+F1+Fn បើកវេបផេកពិនិត្យ។ -->
+
+    <h2>ឧ.៣ ជួរឈរទី១មាន ៣ក្រឡា ជួរឈរទី២មាន ៩ក្រឡា</h2>
+    <!-- ឧ.៣. ក្រឡាមានមួយជួរដេក។ ជួរឈរទី១មាន ៣ក្រឡា ជួរឈរទី២មាន ៩ក្រឡា -->
+    <div class="container">
+      <div class="row">
+        <div class="col-3">ជួរឈរទី១</div>
+        <div class="col-9">ជួរឈរទី២</div>
+      </div>
+    </div>
+    <!-- ចុច CTRL+F1 ឬ CTRL+F1+Fn បើកវេបផេកពិនិត្យ។ -->
+
+    <h2>ឧ.៤ ទូរស័ព្ទ​ ថេប្លេត កុំព្យូទ័រ​</h2>
+    <h3>ទម្រង់ពេញ</h3>
+    <!-- ឧ.៤. ក្រឡាមានមួយជួរដេក។ ជួរដេកបែងជាបីជួរឈរប្រវែងផ្សេងគ្នា -->
+    <div class="container">
+      <div class="row">
+        <!-- ទូរស័ព្ទមួយជួរឈរ ថេប្លេត[-md]ពីរជួរឈរប្រវែងស្មើគ្នា កុំព្យូទ័រ[-lg]បីជួរឈរប្រវែងស្មើគ្នា
+        ឧ.៤.១ សរសេរត្រឹម col-12 ក្នុង div ទាំងបី។  ចុច CTRL+F1 ឬ CTRL+F1+Fn បើកវេបផេកពិនិត្យ។ 
+        ឧ.៤.២ សរសេរថែម col-12 col-md-6 ក្នុង div ទាំងបី។  ចុច CTRL+F1 ឬ CTRL+F1+Fn បើកវេបផេកពិនិត្យ។
+        ឧ.៤.៣ សរសេរថែម col-12 col-md-6 col-lg-4 ក្នុង div ទាំងបី។  ចុច CTRL+F1 ឬ CTRL+F1+Fn បើកវេបផេកពិនិត្យ។ -->
+        <div class="col-12 col-md-6 col-lg-4">ជួរឈរទី១</div>
+        <div class="col-12 col-md-6 col-lg-4">ជួរឈរទី២</div>
+        <div class="col-12 col-md-6 col-lg-4">ជួរឈរទី៣</div>
+      </div>
+    </div>
+    <h3>ទម្រង់កាត់</h3>
+    <!-- ឧ.៤. ក្រឡាមានមួយជួរដេក។ ជួរដេកបែងជាបីជួរឈរប្រវែងផ្សេងគ្នា -->
+    <div class="container">
+      <!-- ទូរស័ព្ទមួយជួរឈរ ថេប្លេតពីរជួរឈរប្រវែងស្មើគ្នា កុំព្យូទ័របីជួរឈរប្រវែងស្មើគ្នា
+        - row row-cols[-breakpoint]-numberofcolumn ជាក្បួនកំណត់ថាជួរដេកមានជួរឈរប៉ុន្មាន។ សញ្ញា[]បញ្ជាក់ថា មិនសរសេរក័បាន សរសេរក័បាន។
+      -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <div>ជួរឈរទី១</div>
+        <div>ជួរឈរទី២</div>
+        <div>ជួរឈរទី៣</div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ចុច CTRL+F1 ឬ CTRL+F1+Fn បើកវេបផេកពិនិត្យ។ -->
+  </body>
+</html>

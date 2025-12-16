@@ -1,0 +1,23 @@
+body {
+  background: #f9f9fb;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+button {
+  padding: 0.4rem 1rem;
+  background: none;
+  color: dodgerblue;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 2px solid dodgerblue;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: dodgerblue;
+  color: #fff;
+  transition: 0.4s;
+}

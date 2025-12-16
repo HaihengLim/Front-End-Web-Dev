@@ -1,0 +1,23 @@
+.fs-1 {
+  font-size: 3rem;
+}
+.fw-b {
+  font-weight: bold;
+}
+.bg-dodgerblue {
+  background-color: dodgerblue;
+}
+.px-6 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.mx-3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.text-white {
+  color: white;
+}
+.text-center {
+  text-align: center;
+}

@@ -1,0 +1,28 @@
+html,
+body {
+  font: 16px/1.6 Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: background-color 0.5s, color 0.5s;
+}
+#btnApply {
+  padding: 8px 32px;
+  border-radius: 4px;
+  margin: 8px;
+}
+
+/* បង្កើតថ្នាក់នៃការរចនា silver */
+.silver {
+  background: #c0c0c0;
+  color: #222;
+}
+
+/* បង្កើតថ្នាក់នៃការរចនា orange */
+.orange {
+  background: #ff9800;
+  color: #fff;
+}
+
+/* បង្កើតថ្នាក់នៃការរចនា blue */
+.blue {
+  background: #001f3f;
+  color: #e0f7ff;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact | Front-End Developer</title>
+        <link rel="stylesheet" href="../style/default0.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../index.html">about</a>
+                <a href="work.html">project/work</a>
+                <a href="resume.html">resume</a>
+                <a href="contact.html">contact</a>
+            </nav>
+        </header>
+        <main>
+            <section id="contact" class="container">
+                <h1>Get in tocuch</h1>
+                <p>Feel free to reach out to via following form.</p>
+                <form action="mailto:sokmen@example.com" method="POST" enctype="text/plain"> 
+                    <div> 
+                        <label for="name">Full Name</label> 
+                        <input type="text" id="name" name="name" required> 
+                    </div> 
+                    <div> 
+                        <label for="email">Email Address</label> 
+                        <input type="email" id="email" name="email" required> 
+                    </div> 
+                    <div> 
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+85512345678"> 
+                    </div> 
+                    <div> 
+                        <label for="company">Company / Organization</label> 
+                        <input type="text" id="company" name="company"> 
+                    </div> 
+                    <div class="full-width"> 
+                        <label for="subject">Subject</label> 
+                        <input type="text" id="subject" name="subject"> 
+                    </div> 
+                    <div class="full-width"> 
+                        <label for="reason">Reason for Contact</label> 
+                        <select id="reason" name="reason"> 
+                            <option value="">-- Select an Option --</option> 
+                            <option value="project">Work on a Project</option> 
+                            <option value="job">Job Opportunity</option> 
+                            <option value="collaboration">Collaboration</option> 
+                            <option value="general">General Inquiry</option> 
+                        </select> 
+                    </div> 
+                    <div class="full-width"> 
+                        <label for="message">Your Message</label> 
+                        <textarea id="message" name="message" rows="6" required></textarea> 
+                    </div> 
+                    <div class="checkbox"> 
+                        <input type="checkbox" id="newsletter" name="newsletter"> 
+                        <label for="newsletter">Subscribe me to your newsletter</label> 
+                    </div> 
+                    <button type="submit">Send Message</button> 
+                </form>
+            </section>
+            <section class="info"> 
+                <p>Email: sokmen@gmail.com</p> 
+                <p>Phone: +855 123 456</p> 
+            </section>
+        </main>
+        <footer>
+            <p>© 2025 Ve Sakha. Front-End Developer | HTML • CSS • JavaScript • Bootstrap • React.js</p>
+            <p>
+            <a href="https://facebook.com/sokmen" target="_blank">facebook</a> |
+            <a href="https://t.me/sokmen" target="_blank">telegram</a> |
+            <a href="mailto:sokmen@gmail.com">Email</a>
+            </p>
+        </footer>
+    </body>
+</html>

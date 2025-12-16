@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Local Bootstrap</title>
+    <link rel="stylesheet" href="../style/bootstrap/bootstrap.min.css" />
+    <script src="../script/React/react.development.js"></script>
+    <script src="../script/React/react-dom.development.js"></script>
+    <script src="../script/React/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="welcomeHT"></div>
+    <div id="greetHT"></div>
+    <div id="receiveHT"></div>
+    <script type="text/babel">
+      function Welcome() {
+        return (
+          <h1 className="alert alert-primary text-center">Hello, Ah Ra</h1>
+        );
+      }
+
+      const welcomeJS = document.getElementById("welcomeHT");
+
+      const welcomeRE = ReactDOM.createRoot(welcomeJS);
+      welcomeRE.render(<Welcome />);
+
+      const greetJS = document.getElementById("greetHT");
+      const greetRE = ReactDOM.createRoot(greetJS);
+      greetRE.render(<Welcome />);
+
+      const receiveJS = document.getElementById("receiveHT");
+      const receiveRE = ReactDOM.createRoot(receiveJS);
+      receiveRE.render(<Welcome />);
+    </script>
+
+    <script src="../script/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

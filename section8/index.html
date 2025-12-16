@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>grid box — playgrund</title>
+    <style>
+      .container {
+        background: yellow;
+        border: 2px solid blue;
+        padding: 20px;
+        max-width: 1200px;
+        min-height: 500px;
+        display: grid;
+        /* ទទឹងជួរឈរ៖ ទី១ប្រវែង ២០០ភីកសែល ទី២ប្រវែង ៥៥០ភីកសែល និងទី៣ប្រវែង ២៥០ភីកសែល */
+        grid-template-columns: 200px 550px 250px;
+        /* កម្ពស់ដេករ៖ ទី១ ទី២ និងទី៣ ប្រវែងស្មេីៗគ្នាគឺ ១២៨ភីកសែល */
+        grid-template-rows: 128px 128px 128px;
+        gap: 20px;
+      }
+      /* ជ្រើសធាតុថិតក្នុងថ្នាក់ item មករចនា */
+      .item {
+        background: lightgray;
+        border: 3px solid black;
+        padding: 16px;
+        font-size: 200%;
+        color: #333333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      ដាក់ display: flex; ឱ្យធាតុថិតក្នុងថ្នាក់ container នោះវាក្លាយជា grid
+      container ។ រីឯធាតុថិតក្នុងថ្នាក់ item ជាកូននៃធាតុថិតក្នុងថា្នក់ container
+      ។ ធាតុថិតក្នុងថ្នាក់ item នេះឯងក្លាយជា grid item ។
+    </h1>
+    <h2>1. base</h2>
+    <div class="container">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>2. grid-auto-flow: column;</h2>
+    <div class="container" style="grid-auto-flow: column">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>3. justify-items:end;</h2>
+    <div class="container" style="justify-items: end">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>4. justify-items:center;</h2>
+    <div class="container" style="justify-items: center">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>5. justify-items:start;</h2>
+    <div class="container" style="justify-items: start">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>6. justify-content:start;</h2>
+    <div class="container" style="justify-content: start">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>7. justify-content:center;</h2>
+    <div class="container" style="justify-content: center">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>8. justify-content:end;</h2>
+    <div class="container" style="justify-content: end">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>9. align-items:center;</h2>
+    <div class="container" style="align-items: center">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>10. align-items:start;</h2>
+    <div class="container" style="align-items: start">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>11. align-items:end;</h2>
+    <div class="container" style="align-items: end">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>12. align-content:end;</h2>
+    <div class="container" style="align-content: end">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>13. align-content:start;</h2>
+    <div class="container" style="align-content: start">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>14. align-content:center;</h2>
+    <div class="container" style="align-content: center">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>
+      15. place-content:center; is shortcut of align-content:center +
+      justify-content:center
+    </h2>
+    <div class="container" style="place-content: center">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>
+      16. place-content:end; is shortcut of align-content:end +
+      justify-content:end
+    </h2>
+    <div class="container" style="place-content: end">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>
+      17. place-content:start; is shortcut of align-content:start +
+      justify-content:start
+    </h2>
+    <div class="container" style="place-content: start">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>
+      18. place-content:start end; is shortcut of align-content:start +
+      justify-content:end
+    </h2>
+    <div class="container" style="place-content: start end">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <h2>
+      *** 19. ធម្មតាទទឹងជួរឈរនិងកម្ពស់ជួរដេកនៃ grid ច្រើនប្រើខ្មាតភាគ (FRaction)
+      ដូចជាទទឹង container ត្រូវចែកជា ១៦ភាគ ដោយជួរឈរទី១យក២ភាគ ទី២យក១០ភាគ
+      និងទី៣យក៤ភាគ ។ល។
+    </h2>
+    <div
+      class="container"
+      style="
+        grid-template-columns: 2fr 10fr 4fr;
+        grid-template-rows: 1fr 2fr auto;
+      "
+    >
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+  </body>
+</html>

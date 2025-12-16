@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header Position Demo</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+
+  section {
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 10px;
+    color: white;
+  }
+
+  /* Common content style */
+  .content {
+    padding: 20px;
+    height: 600px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+  }
+
+  /* Normal Header */
+  .normal-header {
+    background: #4caf50;
+  }
+
+  /* Sticky Header */
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    background: #2196f3;
+    z-index: 100;
+  }
+
+  /* Fixed Header */
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ff5722;
+    z-index: 200;
+    color: white;
+    padding: 10px 20px;
+  }
+
+  /* Padding to avoid overlap with fixed header */
+  .fixed-padding {
+    padding-top: 60px;
+  }
+</style>
+</head>
+<body>
+
+<section>
+  <h2>1. Normal Header</h2>
+  <header class="normal-header">
+    <p>Normal Header (scrolls away)</p>
+  </header>
+  <div class="content">
+    <p>Scroll down to see the normal header scroll out of view.</p>
+  </div>
+</section>
+
+<section>
+  <h2>2. Sticky Header</h2>
+  <header class="sticky-header">
+    <p>Sticky Header (sticks to top when scrolled)</p>
+  </header>
+  <div class="content">
+    <p>Scroll down inside this section to see the sticky header stick at the top of this section.</p>
+  </div>
+</section>
+
+<section>
+  <h2>3. Fixed Header</h2>
+  <header class="fixed-header">
+    <p>Fixed Header (always visible)</p>
+  </header>
+  <div class="content fixed-padding">
+    <p>Scroll the page — the fixed header stays at the top. Extra padding ensures content is not hidden behind the header.</p>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px/1.6 Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9fb;
+  padding-bottom: 100px;
+  padding-top: 45px;
+}
+
+nav a {
+  display: inline;
+}
+
+ul li {
+  display: inline;
+}
+
+header,
+footer {
+  background: dodgerblue;
+  color: white;
+  padding: 12px 20px;
+}
+
+header a,
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+footer {
+  position: absolute;
+}

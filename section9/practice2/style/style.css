@@ -1,0 +1,57 @@
+h1 {
+  text-align: center;
+  font-variant: small-caps;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.center {
+  display: block;
+  margin: 32px auto;
+}
+
+@keyframes colors {
+  0% {
+    background: red;
+  }
+  50% {
+    background: yellow;
+  }
+  100% {
+    background: greenyellow;
+  }
+}
+
+.colors-circle {
+  animation-name: colors;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+}
+
+@keyframes fades {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fades-circle {
+  animation-name: fades;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}

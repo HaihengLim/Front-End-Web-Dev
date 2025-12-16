@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unknow មិនបានដឹង</title>
+  <style>
+    html, body {
+      margin:0;
+      padding:24px 0 0 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background: linear-gradient(135deg,#c8c8c8,#e0e0e0 60%,#b8b8b8);
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      overflow: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+      width: 90vw;
+      min-height: 90vh;
+      gap: 0; /* Removed extra spacing */
+      margin: 0;
+    }
+
+    .ellipse {
+      width: 70%;
+      height: 70%;
+      aspect-ratio: 3/5;
+      border-radius: 50% / 60%;
+      background: radial-gradient(ellipse at 30% 30%, #f0f0f0 10%, #e0e0e0 40%, #c8c8c8 90%);
+      box-shadow: inset -1px -2px 4px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 2.25rem;
+      color: #333333;
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      margin: 0;
+    }
+
+    .ellipse:hover {
+      transform: scale(1.5);
+      box-shadow: inset -2px -3px 6px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="grid" id="grid"></div>
+
+  <script>
+    const grid = document.getElementById('grid');
+    const total = 100;
+
+    for (let i = 1; i <= total; i++) {
+      const el = document.createElement('div');
+      el.className = 'ellipse';
+      el.textContent = i;
+      el.addEventListener('click', () => {
+        el.remove();
+      });
+      grid.appendChild(el);
+    }
+  </script>
+</body>
+</html>

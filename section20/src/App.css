@@ -1,0 +1,7 @@
+img {
+  display: block;
+  padding: 0.25rem;
+  border: 1px solid lightgray;
+  border-radius: 0.25rem;
+  margin: 0.25rem 1rem;
+}

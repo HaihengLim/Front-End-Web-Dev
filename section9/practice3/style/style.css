@@ -1,0 +1,30 @@
+.i-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background: red;
+  color: darkgray;
+}
+
+.background-transition {
+  transition: background-color 0.6s ease-in-out;
+}
+
+#transition:hover {
+  background-color: yellow;
+}
+
+#change:hover {
+  background-color: yellow;
+}
+
+.colors-transition {
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+#transitions:hover {
+  background-color: yellow;
+  color: black;
+}
