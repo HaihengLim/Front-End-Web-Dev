@@ -40,7 +40,7 @@ export default function SearchStudent() {
   ));
 
   return (
-    <form action="" className="w-50">
+    <form action="" className="w-50 mx-auto">
       <fieldset className="d-flex align-items-center ms-3">
         <div
           className="d-inline-block"
@@ -48,9 +48,9 @@ export default function SearchStudent() {
         >
           Search
         </div>
-        <label htmlFor="" className="px-1">
+        {/* <label htmlFor="" className="px-1">
           ID | Name | Average | Grade
-        </label>
+        </label> */}
         <input
           type="text"
           name=""
